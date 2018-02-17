@@ -19,7 +19,9 @@ if ('serviceWorker' in navigator) {
 const au = new Audio();
 const audio = fetch('/test-pwa/sounds/badumts.mp3').then(response => {
   const result = response.blob();
-  au.src = URL.createObjectURL(result);
+  const uri = URL.createObjectURL(result);
+  console.log(uri);
+  au.src = uri;
 })
 
 document.getElementById('btn-play').addEventListener('click', function(e) {
