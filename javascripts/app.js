@@ -18,8 +18,9 @@ if ('serviceWorker' in navigator) {
 //button
 const au = new Audio();
 const audio = fetch('/test-pwa/sounds/badumts.mp3').then(response => {
-  const result = response.blob();
-  const uri = URL.createObjectURL(result);
+  return response.blob();
+}).then(blob => {
+  const uri = URL.createObjectURL(blob);
   console.log(uri);
   au.src = uri;
 })
