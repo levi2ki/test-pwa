@@ -16,13 +16,7 @@ if ('serviceWorker' in navigator) {
 
 
 //button
+const au = new Audio('sounds/badumts.mp3');
 document.getElementById('btn-play').addEventListener('click', function(e) {
-  const soruce = document.getElementById('badums');
-  if (soruce.paused) {
-    soruce.play();
-  } else {
-    soruce.pause();
-    soruce.load();
-    soruce.play();
-  }
+  au.play()
 })
