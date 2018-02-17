@@ -5,33 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-<style>
-  .btn {
-    width: 100px;
-    height: 50px;
-    border: none;
-    display: block;
-    margin: auto;
-    text-align: center;
-    outline: none;
-    background-color:indigo;
-    color: whitesmoke;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 27px / 20px;
-    box-shadow: inset 3px 1px 22px -3px #fff, 1px 3px 18px -3px #000;
-    transition: cubic-bezier(1, 0, 0, 1) 200ms all;
-    margin-bottom: 10px;
-  }
-  .btn:active {
-    box-shadow: inset 3px 1px 22px -3px #fff, 1px 3px 16px #000;
-  }
-</style>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+  <link
+      rel="stylesheet"
+      href="stylesheets/style.css" />
 </head>
 <body>
-<img src="images/1.jpg" alt="img" style="max-width: 100%">
-<button class='btn' data-class="play" data-src="/test-pwa/sounds/badumts.mp3">badumts</button>
-<button class='btn' data-class="play" data-src="/test-pwa/sounds/swerch.mp3">swerch</button>
+  <main class="main">
+    <div role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate">
+      <div class="mdc-linear-progress__buffering-dots"></div>
+      <div class="mdc-linear-progress__buffer"></div>
+      <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+        <span class="mdc-linear-progress__bar-inner"></span>
+      </div>
+      <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+        <span class="mdc-linear-progress__bar-inner"></span>
+      </div>
+    </div>
+
+  <!-- <img src="images/1.jpg" alt="img" style="max-width: 100%"> -->
+  <div class="btn-group">
+    <button class='mdc-button mdc-button--raised' data-class="play" data-src="/test-pwa/sounds/badumts.mp3">badumts</button>
+    <button class='mdc-button mdc-button--raised' data-class="play" data-src="/test-pwa/sounds/swerch.mp3">swerch</button>
+  </div>
+</main>
 </body>
+
 <script async src="javascripts/app.js"></script>
 </html>

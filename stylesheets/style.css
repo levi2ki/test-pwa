@@ -1,8 +1,23 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #eee;
 }
 
-a {
-  color: #00B7FF;
+.main {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 32px;
+}
+
+.mdc-linear-progress {
+  height: 7px;
+  margin-bottom: 30px;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+}
+.mdc-button {
+  margin-bottom: 15px;
 }

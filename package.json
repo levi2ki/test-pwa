@@ -1,0 +1,22 @@
+{
+  "name": "pwa-static",
+  "version": "1.0.0",
+  "description": "pwa static jingle",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levi2ki/test-pwa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levi2ki/test-pwa/issues"
+  },
+  "homepage": "https://github.com/levi2ki/test-pwa#readme",
+  "dependencies": {
+    "@material/linear-progress": "^0.30.0"
+  }
+}
