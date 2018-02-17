@@ -16,7 +16,7 @@ if ('serviceWorker' in navigator) {
 
 
 //button
-const au = new Audio('sounds/badumts.mp3');
+const au = new Audio('/test-pwa/sounds/badumts.mp3');
 document.getElementById('btn-play').addEventListener('click', function(e) {
-  au.play()
+  au.play();
 })
