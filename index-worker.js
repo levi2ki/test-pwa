@@ -6,6 +6,7 @@ self.addEventListener('install', function(event) {
         '/test-pwa/index.html',
         '/test-pwa/javascripts/app.js',
         '/test-pwa/stylesheets/style.css',
+        '/test-pwa/stylesheets/mcw.min.css',
         '/test-pwa/sounds/badumts.mp3',
         '/test-pwa/sounds/swerch.mp3'
       ]);
