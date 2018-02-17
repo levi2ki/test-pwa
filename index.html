@@ -20,7 +20,7 @@
 </head>
 <body>
   <main class="main">
-    <div role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate">
+    <div id='progressbar' role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate">
       <div class="mdc-linear-progress__buffering-dots"></div>
       <div class="mdc-linear-progress__buffer"></div>
       <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
@@ -33,11 +33,11 @@
 
   <!-- <img src="images/1.jpg" alt="img" style="max-width: 100%"> -->
   <div class="btn-group">
-    <button class='mdc-button mdc-button--raised' data-class="play" data-src="/test-pwa/sounds/badumts.mp3">badumts</button>
-    <button class='mdc-button mdc-button--raised' data-class="play" data-src="/test-pwa/sounds/swerch.mp3">swerch</button>
+    <button class='btn-play mdc-button mdc-button--raised' data-class="play" data-src="/test-pwa/sounds/badumts.mp3">badumts</button>
+    <button class='btn-play mdc-button mdc-button--raised' data-class="play" data-src="/test-pwa/sounds/swerch.mp3">swerch</button>
   </div>
 </main>
 </body>
 
-<script async src="javascripts/app.js"></script>
+<script src="javascripts/app.js"></script>
 </html>

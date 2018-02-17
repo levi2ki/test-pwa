@@ -14,7 +14,7 @@ if ('serviceWorker' in navigator) {
 }
 
 function init() {
-  const allBtns = Array.from(document.querySelectorAll('.btn'));
+  const allBtns = Array.from(document.querySelectorAll('.btn-play'));
   const playerBtns = allBtns.filter(x => x.dataset.class = 'play' && x.dataset.src);
 
   playerBtns.forEach(x => {
@@ -37,4 +37,11 @@ function init() {
   })
 }
 
-init();
+window.onload = function() {
+  init();
+  setTimeout(function(){
+    const pb = document.getElementById('progressbar');
+    pb.classList.remove('mdc-linear-progress--indeterminate');
+    pb.classList.add('hidden');
+  }, 1500);
+}
