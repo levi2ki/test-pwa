@@ -12,3 +12,17 @@ if ('serviceWorker' in navigator) {
       console.warn('register worker failed', err)
     });
 }
+
+
+
+//button
+document.getElementById('btn-play').addEventListener('click', function(e) {
+  const soruce = document.getElementById('badums');
+  if (soruce.paused) {
+    soruce.play();
+  } else {
+    soruce.pause();
+    soruce.load();
+    soruce.play();
+  }
+})
