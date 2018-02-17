@@ -18,7 +18,7 @@ if ('serviceWorker' in navigator) {
 //button
 const au = new Audio('/test-pwa/sounds/badumts.mp3');
 document.getElementById('btn-play').addEventListener('click', function(e) {
-  if(ay.paused) {
+  if(au.paused) {
     au.play();  
   } else {
     au.pause();
