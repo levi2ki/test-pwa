@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/images/img-worker.js', {scope: '/images/'})
+  navigator.serviceWorker.register('images/img-worker.js', {scope: '/images/'})
     .then(reg => {
       console.log('register success', reg);
     }).catch(err => {
