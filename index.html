@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 <style>
-  #btn-play {
+  .btn {
     width: 100px;
     height: 50px;
     border: none;
@@ -22,14 +22,14 @@
     box-shadow: inset 3px 1px 22px -3px #fff, 1px 3px 18px -3px #000;
     transition: cubic-bezier(1, 0, 0, 1) 200ms all;
   }
-  #btn-play:active {
+  .btn:active {
     box-shadow: inset 3px 1px 22px -3px #fff, 1px 3px 16px #000;
   }
 </style>
 </head>
 <body>
 <img src="images/1.jpg" alt="img" style="max-width: 100%">
-<button id='btn-play'>badumts</button>
+<button class='btn' data-class="play" data-src="/test-pwa/sounds/badumts.mp3">badumts</button>
 </body>
 <script async src="javascripts/app.js"></script>
 </html>

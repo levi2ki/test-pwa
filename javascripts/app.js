@@ -13,24 +13,28 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+function init() {
+  const allBtns = Array.from(document.querySelectorAll('.btn'));
+  const playerBtns = allBtns.filter(x => x.dataset.class = 'play' && x.dataset.src);
 
+  playerBtns.forEach(x => {
+    const au = new Audio();
+    
+    const audio = fetch(x.dataset.src).then(response => {
+      return response.blob();
+    }).then(blob => {
+      au.src = URL.createObjectURL(blob);
+      x.addEventListener('click', function(e) {
+        if(au.paused) {
+          au.play();  
+        } else {
+          au.pause();
+          au.load();
+          au.play();
+        }
+      })
+    })    
+  })
+}
 
-//button
-const au = new Audio();
-const audio = fetch('/test-pwa/sounds/badumts.mp3').then(response => {
-  return response.blob();
-}).then(blob => {
-  const uri = URL.createObjectURL(blob);
-  console.log(uri);
-  au.src = uri;
-})
-
-document.getElementById('btn-play').addEventListener('click', function(e) {
-  if(au.paused) {
-    au.play();  
-  } else {
-    au.pause();
-    au.load();
-    au.play();
-  }
-})
+init();
