@@ -16,7 +16,11 @@ if ('serviceWorker' in navigator) {
 
 
 //button
-const au = new Audio('/test-pwa/sounds/badumts.mp3');
+const au = fetch('/test-pwa/sounds/badumts.mp3').then(response => {
+  const result = response.blob();
+  return result;
+})
+// const au = new Audio();
 document.getElementById('btn-play').addEventListener('click', function(e) {
   if(au.paused) {
     au.play();  
