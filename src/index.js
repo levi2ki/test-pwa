@@ -1,3 +1,13 @@
+import { registerWorker } from './lib/registerWorker';
+
+const main = () => {
+  require('../assets/css/mcw.min.css');
+  require('../assets/css/style.css');
+
+  if ('serviceWorker' in navigator) {
+    registerWorker('./indexWorker.js', {scope: '/'})
+   }
+}
 function init() {
   const allBtns = Array.from(document.querySelectorAll('.btn-play'));
   const playerBtns = allBtns.filter(x => x.dataset.class = 'play' && x.dataset.src);
@@ -23,6 +33,7 @@ function init() {
 }
 
 window.onload = function() {
+  main();
   init();
   setTimeout(function(){
     const pb = document.getElementById('progressbar');

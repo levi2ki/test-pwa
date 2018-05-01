@@ -2,13 +2,16 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(cache => {
       return cache.addAll([
-        '/test-pwa/',
-        '/test-pwa/index.html',
-        '/test-pwa/javascripts/app.js',
-        '/test-pwa/stylesheets/style.css',
-        '/test-pwa/stylesheets/mcw.min.css',
-        '/test-pwa/sounds/badumts.mp3',
-        '/test-pwa/sounds/swerch.mp3'
+        './',
+        './index.html',
+        './index.js',
+        './stylesheets/style.css',
+        './stylesheets/mcw.min.css',
+        './assets',
+        './assets/audio',
+        './assets/audio/badumts.mp3',
+        './assets/audio/swerch.mp3',
+        './assets/audio/sad-trombone.mp3'
       ]);
     }).catch(err => {
       console.warn('error caching', err)
