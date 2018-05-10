@@ -1,8 +1,7 @@
 {
   "name": "pwa-static",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "pwa static jingle",
-  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -d",
@@ -12,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/levi2ki/test-pwa.git"
   },
-  "author": "",
+  "author": "https://github.com/levi2ki/",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/levi2ki/test-pwa/issues"
