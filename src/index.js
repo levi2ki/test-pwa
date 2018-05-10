@@ -1,13 +1,16 @@
 import { registerWorker } from './lib/registerWorker';
 
+require('../assets/css/mcw.min.css');
+require('../assets/css/style.css');
+
 const main = () => {
-  require('../assets/css/mcw.min.css');
-  require('../assets/css/style.css');
 
   if ('serviceWorker' in navigator) {
-    registerWorker('./indexWorker.js', {scope: '/'})
+    registerWorker('./indexWorker.js'/*, {scope: '/'}*/);
+    registerWorker('./assets/assetsWorker.js'/*, {scope: '/assets/'}*/);
    }
-}
+};
+
 function init() {
   const allBtns = Array.from(document.querySelectorAll('.btn-play'));
   const playerBtns = allBtns.filter(x => x.dataset.class = 'play' && x.dataset.src);
@@ -19,7 +22,7 @@ function init() {
       return response.blob();
     }).then(blob => {
       au.src = URL.createObjectURL(blob);
-      x.addEventListener('click', function(e) {
+      x.addEventListener('click', function() {
         if(au.paused) {
           au.play();  
         } else {
@@ -40,4 +43,4 @@ window.onload = function() {
     pb.classList.remove('mdc-linear-progress--indeterminate');
     pb.classList.add('hidden');
   }, 1500);
-}
+};

@@ -1,11 +1,15 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  entry: {main: ['babel-polyfill', './index.js'], indexWorker: ['babel-polyfill', './indexWorker.js']},
+  entry: {
+    main: ['babel-polyfill', './index.js'],
+    indexWorker: ['babel-polyfill', './indexWorker.js'],
+    'assets/assetsWorker': ['babel-polyfill', './workers/assetsWorker.js']
+  },
   output: {
     filename: '[name].js'
   },
@@ -46,4 +50,4 @@ module.exports = {
     contentBase: [path.join(__dirname, '/dist'), path.join(__dirname, '/dist/assets')],
     https: true,
   }
-}
+};
