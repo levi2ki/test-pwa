@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  entry: {main: './index.js', indexWorker: './indexWorker.js'},
+  entry: {main: ['babel-polyfill', './index.js'], indexWorker: ['babel-polyfill', './indexWorker.js']},
   output: {
     filename: '[name].js'
   },
