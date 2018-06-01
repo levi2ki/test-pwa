@@ -9,6 +9,7 @@ self.addEventListener('install', function(event) {
         '/assets/audio/badumts.mp3',
         '/assets/audio/swerch.mp3',
         '/assets/audio/sad-trombone.mp3',
+        '/assets/audio/WebServerApplicationServer.mp3',
       ]);
     })
       .then(() => {
